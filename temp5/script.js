@@ -36,7 +36,6 @@ const showHome = () => {
       <option value=1>Deposit</option>
       <option value=2>Withdraw</option>
       </select></p>
-      <p>
       <input type='number' id='txtAmount'>
       </p>
       <p><button>Submit</button>
