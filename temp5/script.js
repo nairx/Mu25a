@@ -1,4 +1,5 @@
 const users = [];
+const user={}
 const showLogin = () => {
   let str = `
     <div>
@@ -26,7 +27,7 @@ const showRegister = () => {
   root.innerHTML = str;
 };
 
-const showHome = (user) => {
+const showHome = () => {
   let str = `
     <h1>Welcome ${user.name}</h1>
     <hr>
@@ -62,12 +63,12 @@ const addUser = () => {
 const validateUser = () => {
   let email = document.getElementById("txtEmail").value;
   let pass = document.getElementById("txtPass").value;
-  const found = users.find(
+  const user = users.find(
     (user) => user.email === email && user.pass === pass
   )
   console.log(found)
-  if (found) {
-    showHome(found);
+  if (user) {
+    showHome();
   } else {
     dvMsg.innerHTML = "Access Denied";
   }
