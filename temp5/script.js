@@ -64,9 +64,8 @@ const validateUser = () => {
   let email = document.getElementById("txtEmail").value;
   let pass = document.getElementById("txtPass").value;
   const user = users.find(
-    (user) => user.email === email && user.pass === pass
+    (e) => e.email === email && e.pass === pass
   )
-  console.log(found)
   if (user) {
     showHome();
   } else {
